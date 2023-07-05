@@ -1,1 +1,46 @@
-<h1> WEBSITE TEMPLATE </h1>
+{% extends "website/layout.html" %} 
+
+{% block body %}
+
+<div class="grid">
+  <div>
+    <article>
+      <p>Covid 19 - Nuovi Casi</p>
+      <a href="/covid19" role="button">Vai</a>
+    </article>
+  </div>
+
+  <div>
+    <article>
+      <p>YTDown - YouTube Downloader</p>
+      <a href="/ytdown" role="button">Vai</a>
+    </article>
+  </div>
+
+  <div>
+    <article>
+      <p>Text to speech</p>
+      <a href="/text2speech" role="button">Vai</a>
+    </article>
+  </div>
+</div>
+
+<p>Altri progetti:</p>
+<ol>
+  <li>
+    <a href="/covid19ItaCsv"
+      >Covid 19 - Nuovi Positivi Italia (using csv data)</a
+    >
+  </li>
+  <li>
+    <a href="/covid19ItaJson"
+      >Covid 19 - Nuovi Positivi Italia (using json data)</a
+    >
+  </li>
+  <li>
+    <a href="/covid19LazioJson"
+      >Covid 19 - Nuovi Positivi Lazio (using json data)</a
+    >
+  </li>
+</ol>
+{% endblock %}
