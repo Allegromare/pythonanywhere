@@ -19,4 +19,5 @@ from django.urls import include, path
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("website.urls")),
+    path("down_covid19/", include("down_covid19.urls")),
 ]

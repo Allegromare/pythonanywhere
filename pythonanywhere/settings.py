@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "website",
+    "down_covid19",
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,8 @@ ROOT_URLCONF = "pythonanywhere.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        # Includere questa directory nella sezione TEMPLATES permette di riferirsi ai template presenti in quaeta directory dagli altri template (per estendere il modello base)
+        "DIRS": ["website/templates/website"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
