@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "website",
     "down_covid19",
+    "ytdown",
 ]
 
 MIDDLEWARE = [
