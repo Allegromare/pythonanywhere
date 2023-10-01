@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "website",
     "down_covid19",
     "ytdown",
+    "downloadapp",
 ]
 
 MIDDLEWARE = [

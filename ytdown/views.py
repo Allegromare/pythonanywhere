@@ -7,18 +7,23 @@ from pytube import YouTube
 def index(request):
     # checking whether request.method is post or not
     if request.method == "POST":
-        # getting link from frontend
-        link = request.POST["link"]
-        video = YouTube(link)
+        try:
+            # getting link from frontend
+            link = request.POST["link"]
+            video = YouTube(link)
 
-        # setting video resolution
-        stream = video.streams.get_lowest_resolution()
+            # setting video resolution
+            stream = video.streams.get_lowest_resolution()
 
-        # downloads video
-        stream.download()
+            # downloads video
+            stream.download()
 
-        # returning HTML page
-        return render(request, "ytdown/index.html")
+            # returning HTML page
+            return render(request, "ytdown/index.html")
+
+        except Exception as e:
+            print("An error occurred while downloading the video")
+            print(e)
     return render(request, "ytdown/index.html")
 
 

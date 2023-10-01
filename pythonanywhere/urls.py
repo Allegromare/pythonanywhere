@@ -21,4 +21,5 @@ urlpatterns = [
     path("", include("website.urls")),
     path("down_covid19/", include("down_covid19.urls")),
     path("ytdown/", include("ytdown.urls")),
+    path("downloadapp/", include("downloadapp.urls")),
 ]
